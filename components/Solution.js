@@ -3,7 +3,7 @@ export default function Solution() {
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-600">The Solution</h2>
+          <h2 className="text-base font-semibold leading-7 text-indigo-600">The Solution</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             DeSuite: Your Oracle ERP, Now Web3-Native.
           </p>
@@ -17,7 +17,7 @@ export default function Solution() {
             {/* Step 1 */}
             <li className="flex flex-col lg:flex-row items-start lg:items-center">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-600 text-white">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-600 text-white">
                   <span className="text-xl font-bold">1</span>
                 </div>
               </div>
@@ -32,7 +32,7 @@ export default function Solution() {
             {/* Step 2 */}
             <li className="flex flex-col lg:flex-row items-start lg:items-center">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-600 text-white">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-600 text-white">
                   <span className="text-xl font-bold">2</span>
                 </div>
               </div>
@@ -47,7 +47,7 @@ export default function Solution() {
             {/* Step 3 */}
             <li className="flex flex-col lg:flex-row items-start lg:items-center">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-600 text-white">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-600 text-white">
                   <span className="text-xl font-bold">3</span>
                 </div>
               </div>

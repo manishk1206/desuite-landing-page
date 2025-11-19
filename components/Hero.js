@@ -1,54 +1,65 @@
-'use client'; // This component uses state, so it's a client component
+'use client';
 
 import { useState } from 'react';
-import Header from './Header'; // We import the header here
+import Header from './Header'; 
 
 export default function Hero() {
   return (
-    <div className="bg-white">
+    // Changed bg-white to bg-slate-50 for a softer, premium feel
+    <div className="bg-slate-50 relative overflow-hidden">
       <Header />
+      
       <main className="relative isolate pt-14">
-        {/* Background Gradient Shape */}
-        <div 
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" 
-          aria-hidden="true"
-        >
-          <div 
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#a0c4ff] to-[#4a90e2] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'
-            }} 
-          />
+        
+        {/* --- DYNAMIC BACKGROUND START --- */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+            {/* Blob 1: Purple/Indigo */}
+            <div className="absolute top-0 left-[-10%] w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            {/* Blob 2: Cyan/Blue (Delayed) */}
+            <div className="absolute top-0 right-[-10%] w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            {/* Blob 3: Pink/Purple (Delayed more) */}
+            <div className="absolute -bottom-32 left-[20%] w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
+        {/* --- DYNAMIC BACKGROUND END --- */}
 
-        <div className="py-24 sm:py-32 lg:py-40">
+        <div className="py-24 sm:py-32 lg:py-40 relative">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                The Stablecoin & Tokenization Layer for Oracle ERP
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Seamlessly integrate stablecoin payments, tokenized assets, and blockchain rails directly into your Oracle Financials and SCM.
+            <div className="mx-auto max-w-5xl text-center">
+              
+              {/* THE NEW HEADLINE */}
+              <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500">
+              Stablecoin & Tokenization
+              </span>
+             {/* The <br> now forces a clean break exactly here */}
+            <br /> Layer for Oracle ERP
+            </h1>
+              
+              {/* Description with softer text color */}
+              <p className="mt-6 text-lg leading-8 text-slate-600">
+                Seamlessly integrate stablecoins, tokenized assets and blockchain rails directly into your Oracle Financials and SCM.
                 No complexity. Just compliance, speed, and liquidity.
               </p>
+
+              {/* Buttons */}
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                  href="#"
-                  className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  href="https://calendly.com/desuite/demo-meeting"
+                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-200 ease-in-out transform hover:scale-105"
                 >
                   Book Your Demo
                 </a>
-                <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                <a href="#" className="text-sm font-semibold leading-6 text-slate-900 flex items-center gap-1">
                   Download Whitepaper <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
             
-            {/* Hero Visual (Placeholder) */}
+            {/* Visual Container with Glassmorphism */}
             <div className="mt-16 flow-root sm:mt-24">
-              <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-                <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center border border-gray-300">
-                  <span className="text-gray-500 text-lg font-medium">[Visual: Oracle ERP → DeSuite Bridge → Global Payments]</span>
+              <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4 backdrop-blur-md bg-white/30">
+                <div className="bg-white/80 h-96 rounded-lg flex items-center justify-center border border-white/50 shadow-sm">
+                  <span className="text-slate-400 text-lg font-medium">[Visual: Oracle ERP ↔ DeSuite ↔ Global Chains]</span>
                 </div>
               </div>
             </div>
