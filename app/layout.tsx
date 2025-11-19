@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   title: 'DeSuite | The Stablecoin & Tokenization Layer for Oracle ERP', // <--- UPDATED
   description: 'Seamlessly integrate stablecoin payments, tokenized assets, and blockchain rails directly into your Oracle Financials and SCM.',
   openGraph: {
-    title: 'DeSuite | Enterprise Blockchain Rails',
-    description: 'The secure bridge between Oracle ERP and global digital asset liquidity.',
+    title: 'DeSuite | ERP Blockchain Rails',
+    description: 'The secure bridge between Oracle ERP and Tokenized assets liquidity.',
     url: 'https://desuite.io',
     siteName: 'DeSuite',
     type: 'website',
